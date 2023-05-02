@@ -78,12 +78,11 @@ with psycopg2.connect(database='pytdb', user='postgres', password='you have to u
                 for el in p_list:
                     if el == (None,):
                         print('No phone number')
-                print(p_list)
                 return p_list
             except (Exception, psycopg2.Error) as ex:
                 print(ex)
 
-    phone_list(1)
+    print(phone_list(1))
 
     # Теперь удалим требуемый номер тф по индексу списка номеров
 
